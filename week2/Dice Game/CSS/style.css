@@ -1,0 +1,12 @@
+.dice{
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    width: 120px;
+    height: 120px;
+    border: 10px solid #969696;
+    margin: 5px;
+    background-size: contain;
+    text-align: center;
+  }
+
