@@ -15,15 +15,16 @@ const changeImg = (num,id) => {
 
 const roleDice = (player) => {
     let valueOfDice = 0
-    //for (let i = 0; i < 5;i++){
+    for (let i = 0; i < 5;i++){
         valueOfDice = (Math.floor(Math.random() * 6 + 1));
         //wait(500)
-        setTimeout(changeImg(valueOfDice,player),1000);
-        setTimeout(function(){ alert("Hello"); }, 1000);
+        setInterval(changeImg(valueOfDice,player),1000);
+        //setTimeout(function(){ alert("Hello"); }, 1000);
         console.log(valueOfDice)
-    //}
-    return valueOfDice
+    }
+    return valueOfDice 
 }
+
 
 const winner =(num1,num2) =>{
     if (num1>num2){
