@@ -18,8 +18,9 @@ const roleDice = (player) => {
     //for (let i = 0; i < 5;i++){
         valueOfDice = (Math.floor(Math.random() * 6 + 1));
         //wait(500)
-        changeImg(valueOfDice,player)
-        
+        setTimeout(changeImg(valueOfDice,player),1000);
+        setTimeout(function(){ alert("Hello"); }, 1000);
+        console.log(valueOfDice)
     //}
     return valueOfDice
 }
