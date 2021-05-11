@@ -1,0 +1,13 @@
+tag{   }
+    <tag>
+Tag1, tag2{   }
+    <tag1>
+    <tag2>
+    
+.class1{   }
+    <tag class="class1">
+.class2{   }
+    <tag calss="class1 class2"
+
+#id1{   }
+    <tag id="id1"

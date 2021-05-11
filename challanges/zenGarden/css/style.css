@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Mono');
+@import url('https://fonts.googleapis.com/css?family=Satisfy');
+@import url('https://fonts.googleapis.com/css?family=Roboto:300');
+
+h2 {
+    background: url(../img/zen.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
