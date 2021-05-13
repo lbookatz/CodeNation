@@ -1,10 +1,85 @@
 @import url('https://fonts.googleapis.com/css?family=IBM+Plex+Mono');
 @import url('https://fonts.googleapis.com/css?family=Satisfy');
 @import url('https://fonts.googleapis.com/css?family=Roboto:300');
+@import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
+
+body{
+    font-family: 'Libre Baskerville', serif;
+    color: grey;
+    font-size: 12px;
+
+}
+
+html, body{
+    padding:0;
+    margin:0;
+}
+
+header{
+    background-image: url("../img/huntington.png");
+    height: 180px;
+    background-size: cover;
+    text-align: center;
+    padding-top:70px;
+    
+}
+
+h1{
+    padding-top: 0;
+    padding-bottom: 5px;
+    border-bottom: none;
+    font-family: 'Julius Sans One', sans-serif;
+    font-size: 30px;
+    text-transform: uppercase;
+    color: honeydew;
+}
 
 h2 {
     background: url(../img/zen.svg);
     background-repeat: no-repeat;
     background-size: contain;
+    
+    font-size: 14px;
+    font-style: italic;
+    color: rgb(160, 240, 200);
 }
 
+h1, h2 {    
+    padding: 0 10%;
+    margin: 0;
+    font-weight: normal;
+    
+}
+
+h3{
+
+    text-transform: uppercase;
+    
+    padding: 0px 80px 0px 80px;
+}
+p {
+    line-height: 2;
+    padding: 0px 40px 0px 40px;
+    
+}
+
+div{
+    display: block;
+    /* padding: 5px; */
+    
+}
+abbr {
+    form
+}
+
+.participation, .benefits {
+    background-image: url("../img/bamboo.png");
+    background-attachment:  fixed;
+    background-color: rgba(138,188,159,0.5);
+    /* background-image: url(contours-opaque.png), url(gridlines-opaque.png), url(bamboo.png); */
+    background-repeat:  no-repeat;
+    background-size: cover;
+
+}

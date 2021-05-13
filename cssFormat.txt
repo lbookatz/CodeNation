@@ -11,3 +11,8 @@ Tag1, tag2{   }
 
 #id1{   }
     <tag id="id1"
+
+
+[NewKeyWord="word"]{
+
+}
