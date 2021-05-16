@@ -121,6 +121,17 @@ img{
 /* a {
     text-decoration: none;
 } */
+/* .box:active{
+  background-color: blanchedalmond;
+} */
+#twitter:active{
+  
+  background-color: blanchedalmond;
+}
+#a:visited{
+  
+  background-color: rgb(39, 24, 1);
+}
 
 a, #website, #facebook, #twitter, #instagram {    
     font-family:Verdana, Geneva, Tahoma, sans-serif ;

@@ -16,3 +16,11 @@ Tag1, tag2{   }
 [NewKeyWord="word"]{
 
 }
+
+css: 25px 50px 75px 100px;
+    top css is 25px
+    right css is 50px
+    bottom padding is 75px
+    left padding is 100px
+
+css:top right bottom left
