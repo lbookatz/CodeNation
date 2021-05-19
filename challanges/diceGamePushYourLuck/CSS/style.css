@@ -1,0 +1,72 @@
+* {box-sizing: border-box;}
+
+body {
+    color:rgb(0, 253, 63);
+    text-align: center;
+    /* display: flex; */
+    /* justify-content: center; */
+    /* width:90vw; */
+}
+
+#main{    
+    text-align: center;
+    /* display:flex; */
+    /* justify-content:center; */
+    /* flex-direction: column; */
+/*     
+    width:80%; */
+}
+
+#players{
+    text-align: center;
+    width:80%;
+    /* display: flex; */
+    /* flex-direction: row;  */
+    /* justify-content:center; */
+}
+
+#playerP2{
+    opacity: 0.2;
+}
+
+#central{
+    /* display:block; */
+}
+
+#imageOfDice{
+    height: 50px;
+    width: 50px;
+}
+
+
+.box{
+    padding: 10px;
+}
+
+#containerP1, #containerP2  {   
+    background-color: black;
+    /* display: flex; */
+    /* flex-direction: column; */
+    
+    /* justify-content:center; */
+   
+
+}
+
+
+#rollDiceP1 {
+    visibility: visible;
+}
+
+#rollDiceP2 {
+    visibility: hidden;
+}
+  
+#startAgainP1 {
+    visibility: hidden;
+}
+
+#startAgainP2 {
+    visibility: hidden;
+}
+/* #rollDice{visibility: hidden} */
