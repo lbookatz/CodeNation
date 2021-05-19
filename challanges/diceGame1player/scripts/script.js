@@ -17,7 +17,7 @@ function rollDice() {
         document.getElementById("startAgain").style.visibility = "visible";    
         document.getElementById("rollDice").style.visibility = "hidden";
         if (score >= valueScoreToWin ){
-            document.getElementById("playerWinLoose").innerHTML = "Winner";
+            document.getElementById("playerWinLoose").innerHTML = "**Winner**";
         }
         else {
             document.getElementById("playerWinLoose").innerHTML = "You Lost!";
@@ -40,7 +40,7 @@ document.getElementById("scoreToWin").addEventListener("keyup", scoreToWin);
 function scoreToWin() {
     num = document.getElementById("scoreToWin").textContent;
     if (isNaN(num)){
-        document.getElementById("notInt").innerHTML = "This is not a number";
+        document.getElementById("notInt").innerHTML = "This is not a number (the score needed to win will not change until a valid number is entered)";
     }
     else{ 
         document.getElementById("notInt").innerHTML = "";
