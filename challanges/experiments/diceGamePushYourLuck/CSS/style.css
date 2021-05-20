@@ -1,0 +1,81 @@
+* {box-sizing: border-box;}
+
+body {
+    color: green;
+    font-size: 36px;
+    text-align: center;
+}
+
+#main{    
+   /* display: inline; */
+   position: absolute;
+}
+
+#players{
+    display:flex;
+    min-height: 300px;
+    
+}
+
+#playerP2{
+    opacity: 0.2;
+}
+
+#central{
+    /* display: inline; */
+    position: relative;
+    /* bottom:250px; */
+    /* position: absolute; */
+    
+}
+
+#dice{
+    height: 75px;
+    width: 75px;
+}
+
+#imageOfDice{
+    height: 85px;
+}
+
+
+.box{
+    padding: 10px;
+}
+
+#containerP1{
+    background-color: orange;
+} 
+#containerP2  {   
+    background-color: purple;
+}
+
+.player{
+    width:50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.current::before{
+    content:"Current\A";
+    font-size: 20px;
+    /* vertical-align: top; */
+
+}
+
+.current {
+    background-color: blanchedalmond;
+    height: 60px ;
+    width: 70px;
+    vertical-align: top;
+    padding:0;
+    font-size: 24px;
+}
+
+.buttons{
+    color: black;
+    font-size: 18px;
+}
+

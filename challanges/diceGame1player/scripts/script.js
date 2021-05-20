@@ -8,7 +8,7 @@ document.getElementById("rollDice").addEventListener("click", rollDice);
 function rollDice() {
     //get a random number between 1 and 6
     let valueOfDice = (Math.floor(Math.random() * 6 + 1));
-    console.log(valueScoreToWin)
+    // console.log(valueScoreToWin)
 
     document.getElementById("dice").src = `../images/${valueOfDice}.jpg`;
 
@@ -25,8 +25,11 @@ function rollDice() {
     }
     else{
         //increase score by one
-        score ++; 
-        console.log(score);
+        // score ++; 
+        //increase score by dice number
+        score += valueOfDice;
+
+        // console.log(score);
         document.getElementById("score").innerHTML = score;
     }
 }
