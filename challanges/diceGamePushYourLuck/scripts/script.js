@@ -23,9 +23,8 @@ const switchTurn = () => {
 
 }
 
-document.getElementById("rollDice").addEventListener("click",rollDice);
-
-function rollDice (){
+// example of calling an unnamed function
+document.getElementById("rollDice").addEventListener("click", () =>{
     //get a random number between 1 and 6
     let valueOfDice = (Math.floor(Math.random() * 6 + 1));
     
@@ -46,11 +45,9 @@ function rollDice (){
         score += valueOfDice
         document.getElementById(`currentScoreP${playersTurn}`).textContent = score;
     }
-}
+})
 
-document.getElementById("hold").addEventListener("click", hold);
-
-function hold () {
+document.getElementById("hold").addEventListener("click", () => {
     let totalsScore = document.getElementById(`totalScoreP${playersTurn}`).textContent ;
     totalsScore = parseInt(totalsScore) + parseInt(score);
     document.getElementById(`totalScoreP${playersTurn}`).textContent = totalsScore;
@@ -63,7 +60,7 @@ function hold () {
     else {
         switchTurn();
     }
-}
+})
 
 document.getElementById("scoreToWin").contentEditable = "true";
 
@@ -80,6 +77,7 @@ function scoreToWin () {
     }
 }
 
+//an example of claling a function
 document.getElementById("startAgain").addEventListener("click", startAgain);
 
 function startAgain () {   
