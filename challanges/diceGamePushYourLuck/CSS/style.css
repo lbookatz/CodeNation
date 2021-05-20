@@ -1,28 +1,20 @@
 * {box-sizing: border-box;}
 
 body {
-    color:rgb(0, 253, 63);
+    color: green;
+    font-size: 36px;
     text-align: center;
-    /* display: flex; */
-    /* justify-content: center; */
-    /* width:90vw; */
 }
 
 #main{    
-    text-align: center;
-    /* display:flex; */
-    /* justify-content:center; */
-    /* flex-direction: column; */
-/*     
-    width:80%; */
+   /* display: inline; */
+   position: relative;
 }
 
 #players{
-    text-align: center;
-    width:80%;
-    /* display: flex; */
-    /* flex-direction: row;  */
-    /* justify-content:center; */
+    display:flex;
+    min-height: 300px;
+    
 }
 
 #playerP2{
@@ -30,12 +22,16 @@ body {
 }
 
 #central{
-    /* display:block; */
+    /* display: inline; */
+    position: relative;
+    bottom:250px;
+    /* position: absolute; */
+    
 }
 
-#imageOfDice{
-    height: 50px;
-    width: 50px;
+#dice{
+    height: 75px;
+    width: 75px;
 }
 
 
@@ -43,30 +39,35 @@ body {
     padding: 10px;
 }
 
-#containerP1, #containerP2  {   
-    background-color: black;
-    /* display: flex; */
-    /* flex-direction: column; */
-    
-    /* justify-content:center; */
-   
+#containerP1{
+    background-color: orange;
+} 
+#containerP2  {   
+    background-color: purple;
+}
+
+.player{
+    width:50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.current::before{
+    content:"Current\A";
+    font-size: 20px;
+    /* vertical-align: top; */
 
 }
 
-
-#rollDiceP1 {
-    visibility: visible;
+.current {
+    background-color: blanchedalmond;
+    height: 60px ;
+    width: 70px;
+    vertical-align: top;
+    padding:0;
+    font-size: 24px;
 }
 
-#rollDiceP2 {
-    visibility: hidden;
-}
-  
-#startAgainP1 {
-    visibility: hidden;
-}
 
-#startAgainP2 {
-    visibility: hidden;
-}
-/* #rollDice{visibility: hidden} */

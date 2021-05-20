@@ -9,21 +9,21 @@
     
     <div id="main">
         <div id="players">
-            <div id="containerP1">
+            <div class="player" id="containerP1">
                 <!-- Win or loose display -->
                 <div class="box" id="playerP1">Player 1</div>
                 <!-- the total score -->
-                <div class="box"  id="totalScoreP1">0</div> 
+                <div class="box start"  id="totalScoreP1">0</div> 
                 <!-- The current score -->
-                <div class="box"  id="currentScoreP1">0</div>     
+                <div class="box start current"  id="currentScoreP1">0</div>     
             </div>
-            <div id="containerP2">
+            <div class="player" id="containerP2">
                 <!-- Win or loose display -->
                 <div class="box" id="playerP2">Player 2</div>
                 <!-- the totalscore -->
-                <div class="box"  id="totalScoreP2">0</div>
+                <div class="box start"  id="totalScoreP2">0</div>
                 <!-- The current score -->
-                <div class="box"  id="currentScoreP2">0</div> 
+                <div class="box start current"  id="currentScoreP2">0</div> 
                
             </div>            
         </div>
@@ -34,9 +34,9 @@
             <!-- dice img -->
             <div class="box"  id="imageOfDice"><img id="dice" src="" ></div>
             <!-- roll dice -->
-            <br><br>  <button class="box"  id="rollDice">Roll Dice</button>   
+            <button class="box"  id="rollDice">Roll Dice</button>   
             <!-- Hold dice -->
-            <br><br>  <button class="box"  id="hold">Hold</button>         
+            <br><button class="box"  id="hold">Hold</button>         
         </div>
     </div>  
     <!-- total to win game -->
