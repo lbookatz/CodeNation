@@ -29,14 +29,21 @@ function rollDice (){
     //get a random number between 1 and 6
     let valueOfDice = (Math.floor(Math.random() * 6 + 1));
     
-    document.getElementById("dice").src = `../images/${valueOfDice}.jpg`;
+    // document.getElementById("dice").src = `../images/${valueOfDice}.jpg`;
+
+       //first try to solve empty image by only adding the img html when roll dice pressed
+       document.getElementById("imageOfDice").innerHTML = '<img id="dice" src="" ></img>';    
+       document.getElementById("dice").src = `../images/${valueOfDice}.jpg`;
+
 
     if (valueOfDice == 1){
         switchTurn()
     }       
     else{
         //increase score by one
-        score ++; 
+        // score ++; 
+        //increase score by number on dice
+        score += valueOfDice
         document.getElementById(`currentScoreP${playersTurn}`).textContent = score;
     }
 }
@@ -89,4 +96,5 @@ function startAgain () {
     document.getElementById("playerP2").style.opacity = 0.2; 
     document.getElementById("dice").src = `` ;
     document.getElementById("rollDice").addEventListener("click",rollDice);
+    document.getElementById("imageOfDice").innerHTML = ""
 }
