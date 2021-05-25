@@ -68,14 +68,6 @@ class staff extends cars {
 
 const lance = new staff ("NB05 ORF");
 
-lance._parked ++;
-lance._parked ++;
-lance._parked ++;
-
-lance._parked = 30;
-
-
-
 document.getElementById("calcPay").addEventListener("click", ()=>{
         lance.staffPayAndShowInfo()
 })
