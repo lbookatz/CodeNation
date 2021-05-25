@@ -62,6 +62,8 @@ class staff extends cars {
         this._credit=0
         }
     }
+
+
 }
 
 const lance = new staff ("NB05 ORF");
@@ -72,6 +74,14 @@ lance._parked ++;
 
 lance._parked = 30;
 
-lance.addCredit(5)
 
-lance.staffPayAndShowInfo()
+
+document.getElementById("calcPay").addEventListener("click", ()=>{
+        lance.staffPayAndShowInfo()
+})
+
+//ideally we would need a textbox to get the instance of the class we are working with
+//but that is another days project
+document.getElementById("addCreditButtton").addEventListener("click", ()=>{
+        lance.addCredit(document.getElementById("addCredit").value)
+})
