@@ -11,7 +11,9 @@ let x = document.getElementById("num").value
 
 for (let i = 0; i <= x;i++){
     //get a random number between 1 and 6
-    let valueOfDice = (Math.floor(Math.random() * 6 + 1));
+    // let valueOfDice = (Math.floor(Math.random() * 6 + 1));
+
+    let valueOfDice =  Math.ceil(Math.random()*6)
     switch (valueOfDice){
         case 1:
             one++;
@@ -40,6 +42,7 @@ document.getElementById(`three`).textContent = `${three} 3's`;
 document.getElementById(`four`).textContent = `${four} 4's`;
 document.getElementById(`five`).textContent = `${five} 5's`;
 document.getElementById(`six`).textContent = `${six} 6's`;
+
 })
 
 document.getElementById("reset").addEventListener("click", () =>{
