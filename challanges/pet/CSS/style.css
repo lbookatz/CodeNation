@@ -1,0 +1,35 @@
+.buttonContainer, .actionContainer, .animalsContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+}
+
+.animalsContainer{
+    height: 300px;
+}
+
+.buttonBox, .actionBox {
+    width:auto;
+}
+
+#animals{
+    width:auto;
+    height: 150px;
+}
+
+.animalsBox{
+    width: 150px;
+    height: 150px;
+}
+img {
+    width:150px;
+    height: 150px;
+}
+
+p {
+    margin:5px;
+    font-size: 24px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
