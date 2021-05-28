@@ -39,8 +39,7 @@ class Animal{
             animalsList = animalsList + '<option value="' + arrayOfAnimals[i] + '">' + arrayOfAnimals[i] + '</options>\n';
         }
         animalsList = animalsList + "</select>"
-        // animalsList = animalsList + "<input type='button' id='drinkButton' value='add to order' onclick='coffeeShop.addToOrder(document.getElementById(\"drinkOption\").value,\"drink\")'> "
-       document.getElementById("selectedAnimalDiv").innerHTML=animalsList;
+        document.getElementById("selectedAnimalDiv").innerHTML=animalsList;
     }
 
 }
@@ -76,8 +75,21 @@ document.getElementById("catButton").addEventListener("click",()=>{
     let animalName = prompt("What would you like to call your cat?")
     //could add a random generator for diffrent animal pictures.
     if (animalName) {
-        document.getElementById("animalsContainer").innerHTML += " <div class='animalsBox'> <img class='animalImg' id='" + animalName + "' src='../images/cat.jpg' alt='cat'></img><p>" + animalName + "</p></div>"
+        document.getElementById("animalsContainer").innerHTML += 
+            "<div class='animalsBox'> <img class='animalsImg' id='" + animalName + "' src='../images/cat.jpg' alt='cat'></img><p>" + animalName + "</p></div>";
+        
         animalName = new cat(animalName, true);
+
+        // accessing the elements with same classname
+        let elements = document.querySelectorAll('.animalsImg');
+
+        // adding the event listener by looping
+        elements.forEach(element => {
+            element.addEventListener('click', (e)=>{
+                console.log(element.id._name);
+            });
+        });
+
     }
     else{
         alert("You didn't give your animal a name?")        
@@ -87,7 +99,7 @@ document.getElementById("catButton").addEventListener("click",()=>{
 document.getElementById("bunnyButton").addEventListener("click",()=>{
     let animalName = prompt("What would you like to call your bunny?")
     if (animalName) {
-        document.getElementById("animalsContainer").innerHTML += " <div class='animalsBox'> <img class='animalImg' id='" + animalName + "' src='../images/bunny.jpg' alt='bunny'></img><p>" + animalName + "</p></div>"
+        document.getElementById("animalsContainer").innerHTML += "<div class='animalsBox'> <img class='animalsImg' id='" + animalName + "' src='../images/bunny.jpg' alt='bunny'></img><p>" + animalName + "</p></div>";
         animalName = new bunny(animalName, true);
     }
     else{
@@ -98,7 +110,7 @@ document.getElementById("bunnyButton").addEventListener("click",()=>{
 document.getElementById("dogButton").addEventListener("click",()=>{
     let animalName = prompt("What would you like to call your dog?")
     if (animalName) {
-        document.getElementById("animalsContainer").innerHTML += " <div class='animalsBox'> <img class='animalImg' id='" + animalName + "' src='../images/dog.jpg' alt='dog'></img><p>" + animalName + "</p></div>"
+        document.getElementById("animalsContainer").innerHTML += "<div class='animalsBox'> <img class='animalsImg' id='" + animalName + "' src='../images/dog.jpg' alt='dog'></img><p>" + animalName + "</p></div>";
         animalName = new dog(animalName, true);
     }
     else{
@@ -111,21 +123,21 @@ document.getElementById("dogButton").addEventListener("click",()=>{
 // console.log(34)
 // });
 
-// // accessing the elements with same classname
-// const elements = document.querySelectorAll('.animalsBox');
+// accessing the elements with same classname
+let elements = document.querySelectorAll('.animalsImg');
 
-// // adding the event listener by looping
-// elements.forEach(element => {
-//    element.addEventListner('click', (e)=>{
-//      console.log('someone hit me');
-//    });
-// });
-
-document.getElementById("play").addEventListener("click",()=>{
-    console.log(document.getElementById("animalsList").value)
-    const name = document.getElementById("animalsList").value;
-    console.log(name)
-    name.ifPlayedWith();
-    console.log(document.getElementById("animalsList").value._hunger)
+// adding the event listener by looping
+elements.forEach(element => {
+   element.addEventListener('click', (e)=>{
+     console.log('someone hit me');
+   });
 });
+
+// document.getElementById("play").addEventListener("click",()=>{
+//     console.log(document.getElementById("animalsList").value)
+//     const name = document.getElementById("animalsList").value;
+//     console.log(name)
+//     name.ifPlayedWith();
+//     console.log(document.getElementById("animalsList").value._hunger)
+// });
 
