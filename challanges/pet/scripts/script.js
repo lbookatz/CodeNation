@@ -112,58 +112,77 @@ class Animal{
         const hunger = this._hunger;
 
         switch(true){
-            case hunger > 150:
+            case hunger > 130:
+                document.getElementById("message").textContent = this.name + " couldn't take all that food and said good bye"
                 //overfed animal dies
+                this.salePet()
                 break;
             case hunger > 75:
+                document.getElementById(this.name+"Hunger").textContent = hunger + ": I could create a random comment"
                 //no message
                 break;
             case hunger > 25:
+                document.getElementById(this.name+"Hunger").textContent = hunger + ": I am hungry"
                 //I'm Hungry
                 break;
             case hunger > 0:
+                document.getElementById(this.name+"Hunger").textContent = hunger + ": I am very hungry"
                 //I'm So Hungry
                 break;
             default:
-                //dead
+                document.getElementById("message").textContent = this.name + " died"
+                //overfed animal dies
+                this.salePet()
         }
 
         const thirst = this._thirst;
 
         switch(true){
             case thirst > 150:
+                document.getElementById("message").textContent = this.name + ": had to much water his bladder burst"
                 //overfed animal dies
                 break;
             case thirst > 75:
+                document.getElementById(this.name+"Thirst").textContent = thirst + ": I could create a random comment"
                 //no message
                 break;
             case thirst > 25:
+                document.getElementById(this.name+"Thirst").textContent = thirst + ": Please give me a drink"                
                 //I'm thirsty
                 break;
             case thirst > 0:
+                document.getElementById(this.name+"Thirst").textContent = thirst + ": I'm dying of thirst"
                 //I'm very thirsty
                 break;
             default:
-                //dead
+                document.getElementById("message").textContent = this.name + " died"
+                //overfed animal dies
+                this.salePet()
         }
 
         const bored = this._bored;
 
         switch(true){
             case bored > 150:
+                document.getElementById("message").textContent = this.name + ": had to much water his bladder burst"
                 //overexcited runs for the wind
                 break;
             case bored > 75:
+                document.getElementById(this.name+"Bored").textContent = bored + ": I could create a random comment"
                 //no message
                 break;
             case bored > 25:
+                document.getElementById(this.name+"Bored").textContent = bored + ": I could create a random comment"
                 //I'm bored
                 break;
             case bored > 0:
-                //I'm verybored
+                document.getElementById(this.name+"Bored").textContent = bored + ": I could create a random comment"
+                //I'm very bored
                 break;
             default:
-                //bored animal runs away
+                document.getElementById("message").textContent = this.name + " ran away"
+                //overfed animal dies
+                this.salePet()
         }
     }
 }
@@ -177,13 +196,31 @@ class bunny extends Animal {
     }
 
     get lovesCarrots(){return this._lovesCarrot;}
-
+    
     hop(){
-        //this will make the image animate up and down
+        // //this will make the image animate up and down
+        // var id = null;
+
+        // var element = document.getElementById(currentAnimalSelected.name + "Img");  
+        // console.log(element) 
+        // var pos = 0;
+        // clearInterval(id);
+        // id = setInterval(frame, 500);
+        // function frame() {
+        //     for (let i = 0; i == 6; i++){
+        //         element.style.bottom = i*10 + 'px';                 
+        //     }
+        //     for (let i = 6; i == 0; i--){
+        //         element.style.bottom = i*10 + 'px';                 
+        //     }
+        // }
+
+
     }
+    
 
     buttonPressed (action) {
-
+        
         switch (action){
             case "feed":
                 this._hunger += 10;
@@ -206,11 +243,13 @@ class bunny extends Animal {
 
             case "teach":
                 //not yet implemented
+                // this.hop()
                 break;
 
             case "clean":
                 //needs to remove poop
                 this.cleanPets()
+                break;
             case "sale":
                 this.salePet()
                 break;
@@ -224,15 +263,15 @@ class bunny extends Animal {
         switch (randomNumber){
             case 1:
             case 2:
-                this._bored -= 15
+                this._bored -= 5
                 break;
             case 3:
             case 4:
             case 5:
             case 6:
-                this._hunger -= 15
+                this._hunger -= 5
             case 7:
-                this._thirst -= 15
+                this._thirst -= 5
                 break;
             case 8:
             case 9:
@@ -256,7 +295,9 @@ class bunny extends Animal {
                     bunnyCounter ++;
                     }
                 break;
-        }    
+        }  
+        
+        this.checkStatus()
     }
 };
 
@@ -298,12 +339,13 @@ class dog extends Animal {
             case "clean":
                 //needs to remove poop
                 this.cleanPets()
+                break;
             case "sale":
                 this.salePet()
                 break;
         }        
 
-        this.animalPoop(130);
+        this.animalPoop(120);
 
 
         //need to add a random to pick arrayOfAnimals[random] (use the length of array to make the random) to effect other pets. 
@@ -323,10 +365,10 @@ class dog extends Animal {
                 break;
             case 10:
                 break;
-        }    
+        }   
+        this.checkStatus() 
     }
 };
-
 
 class cat extends Animal {
     constructor(name){
@@ -356,7 +398,7 @@ class cat extends Animal {
                 break;
 
             case "play":
-                this._hunger -= 15;
+                this._hunger -= 10;
                 this._thirst -= 5;
                 this._bored += 20;
                 break;
@@ -368,6 +410,7 @@ class cat extends Animal {
             case "clean":
                 //needs to remove poop
                 this.cleanPets()
+                break;
             case "sale":
                 this.salePet()
                 break;
@@ -384,11 +427,11 @@ class cat extends Animal {
             case 2:
             case 3:
             case 4:
-                this.bored -= 20
+                this.bored -= 10
                 break;
             case 5:
             case 6:
-                this.hunger -= 10
+                this.hunger -= 5
             case 7:
             case 8:
                 this._thirst -= 10
@@ -397,46 +440,82 @@ class cat extends Animal {
                 break;
             case 10:
                 break;
-        }    
+        } 
+        this.checkStatus()   
     }
 };
 
-document.getElementById("catButton").addEventListener("click",()=>{
-    let animalName = prompt("What would you like to call your cat?")
-    //could add a random generator for diffrent animal pictures.
-    if (animalName) {
-        document.getElementById("animalsContainer").innerHTML += 
-            "<div class='animalsBox' id='" + animalName + "'> <img class='animalsImg'  src='../images/cat.jpg' alt='cat'></img><p>" + animalName + "</p></div>";
-        
-        animalName = new cat(animalName, true);
-    }
-    else{
-        alert("You didn't give your animal a name?")        
-    }      
-});
+// document.getElementById("catButton").addEventListener("click",()=>{
+//     let animalName = prompt("What would you like to call your cat?")
+//     //could add a random generator for diffrent animal pictures.
+//     if (animalName) {
+//         document.getElementById("animalsContainer").innerHTML += 
+//             "<div class='animalsBox' id='" + animalName + "'> <div><img class='animalsImg'  src='../images/cat.jpg' id='" + animalName + "Img' alt='cat'></img> <p>" + animalName + "</p><p id='" + animalName + "Hunger'></p><p id='" + animalName + "Thirst'></p><p id='" + animalName + "Bored'></p></div></div>";
+//         animalName = new cat(animalName, true);
+//     }
+//     else{
+//         alert("You didn't give your animal a name?")        
+//     }      
+// });
 
-document.getElementById("bunnyButton").addEventListener("click",()=>{
-    let animalName = prompt("What would you like to call your bunny?")
-    if (animalName) {
-        document.getElementById("animalsContainer").innerHTML += 
-            "<div class='animalsBox' id='" + animalName + "'> <div> <img class='animalsImg' src='../images/bunny.jpg' alt='bunny'></img><p>" + animalName + "</p></div></div>";
-        animalName = new bunny(animalName, true);
-    }
-    else{
-        alert("You didn't give your animal a name?")        
-    }    
-});
+// document.getElementById("bunnyButton").addEventListener("click",()=>{
+//     let animalName = prompt("What would you like to call your bunny?")
+//     if (animalName) {
+//         document.getElementById("animalsContainer").innerHTML += 
+//             "<div class='animalsBox' id='" + animalName + "'> <div><img class='animalsImg' src='../images/bunny.jpg' id='" + animalName + "Img' alt='bunny'></img><p>" + animalName + "</p><p id='" + animalName + "Hunger'></p><p id='" + animalName + "Thirst'></p><p id='" + animalName + "Bored'></p></div></div>";
+//         animalName = new bunny(animalName, true);
+//     }
+//     else{
+//         alert("You didn't give your animal a name?")        
+//     }    
+// });
 
-document.getElementById("dogButton").addEventListener("click",()=>{
+// document.getElementById("dogButton").addEventListener("click",()=>{
+//     let animalName = prompt("What would you like to call your dog?")
+//     if (animalName) {
+//         document.getElementById("animalsContainer").innerHTML += 
+//             "<div class='animalsBox' id='" + animalName + "' > <div><img class='animalsImg' src='../images/dog.jpg' id='" + animalName + "Img' alt='dog'></img><p>" + animalName + "</p><p id='" + animalName + "Hunger'></p><p id='" + animalName + "Thirst'></p><p id='" + animalName + "Bored'></p></div></div>";
+//         animalName = new dog(animalName, true);
+//     }
+//     else{
+//         alert("You didn't give your animal a name?")        
+//     }      
+// });
+
+// I managed to condense to one functio rether then the three above
+const createAnimal = (type) => {
     let animalName = prompt("What would you like to call your dog?")
     if (animalName) {
-        document.getElementById("animalsContainer").innerHTML += "<div class='animalsBox' id='" + animalName + "' > <img class='animalsImg' src='../images/dog.jpg' alt='dog'></img><p>" + animalName + "</p></div>";
-        animalName = new dog(animalName, true);
+        document.getElementById("animalsContainer").innerHTML += 
+            "<div class='animalsBox' id='" + animalName + "' > \
+            <div>\
+                <img class='animalsImg' src='../images/"+type+".jpg' id='" + animalName + "Img' alt="+type+"'></img>\
+                <p class='animalImgName'>" + animalName + "</p>\
+                <p id='" + animalName + "Hunger'>Hunger</p>\
+                <p id='" + animalName + "Thirst'>Thirst</p>\
+                <p id='" + animalName + "Bored'>Bored</p>\
+            </div>\
+            </div>";
+        switch (type){
+            case "dog":
+                animalName = new dog(animalName);
+                break;
+            case "cat":
+                animalName = new cat(animalName);
+                break;
+            case "bunny":  
+                animalName = new bunny(animalName, true);
+                break;
+        }    
     }
     else{
         alert("You didn't give your animal a name?")        
-    }      
-});
+    }   
+}
+
+document.getElementById("catButton").addEventListener("click",createAnimal.bind(null,"cat"));
+document.getElementById("bunnyButton").addEventListener("click",createAnimal.bind(null,"bunny"));
+document.getElementById("dogButton").addEventListener("click",createAnimal.bind(null,"dog"));
 
 //create funtion that run 10 seconds to check status of pet and then go through switch
 // document.getElementsByClassName("animalsBox").addEventListener("click",() => {
@@ -483,8 +562,11 @@ buttonClean.addEventListener("click", function(event){
     currentAnimalSelected.buttonPressed("clean")
 });
 
-
 let buttonSale = document.getElementById("sale");
 buttonSale.addEventListener("click", function(event){
     currentAnimalSelected.buttonPressed("sale")
 });
+
+setInterval(function(){ 
+    alert("every 5 seconds")
+}, 5000);

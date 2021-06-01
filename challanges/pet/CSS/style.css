@@ -2,12 +2,13 @@
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    align-items: center;
+    align-items: top;
     text-align: center;
 }
 
 .animalsContainer{
-    height: 300px;
+    height: 400px;
+    margin: 50px;
 }
 
 .buttonBox, .actionBox {
@@ -20,13 +21,14 @@
 }
 
 .animalsBox{
-    align-items: baseline;
+    /* align-items: baseline; */
     width: 150px;
     height: 150px;
     position: relative;
 }
 .animalsImg{
-
+    /* position: absolute; */
+    /* bottom:100px; */
 }
 
 img {
@@ -34,7 +36,7 @@ img {
     height: 150px;
 }
 
-p {
+.animalImgName {
     margin:5px;
     font-size: 24px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -53,3 +55,20 @@ p {
     height:50px;
     bottom:0px;
 }
+
+button {
+    height: 50px;
+    width:150px;
+    background-color: green;
+    border-radius: 10px;
+    font-size: 2em;
+    text-shadow: 2px 2px gray;
+    border: 0px ;
+    box-shadow: 5px 5px 10px rgb(42, 58, 42);
+}
+
+#message{
+    font-size: 24px;
+    text-align: center;
+}
+
