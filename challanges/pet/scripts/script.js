@@ -30,6 +30,12 @@ class Animal{
         this._bored++;
     }
 
+    intervalReduction(){
+        this._hunger--;
+        this._thirst--;
+        this._bored--;
+    }
+
     // populateAnimalsList () {
     //     let animalsList = '<select name="animalsList" id="animalsList">\n';
 
@@ -568,5 +574,11 @@ buttonSale.addEventListener("click", function(event){
 });
 
 setInterval(function(){ 
-    alert("every 5 seconds")
-}, 5000);
+    if (arrayOfAnimals != 0){
+        for(let i = 0; i < arrayOfAnimals.length; i++){
+            arrayOfAnimals[i].intervalReduction();
+            arrayOfAnimals[i].checkStatus();
+        }
+    }
+}
+, 1000);
