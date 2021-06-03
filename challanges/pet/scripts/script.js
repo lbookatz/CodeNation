@@ -31,9 +31,24 @@ class Animal{
     }
 
     intervalReduction(){
-        this._hunger--;
-        this._thirst--;
-        this._bored--;
+        let randomNumber = (Math.floor(Math.random() * 10 + 1));
+        switch (randomNumber){
+            case 1:
+                this._bored --
+            case 2:
+                this._thirst --               
+            case 3:
+            case 4:
+            case 5:
+                this._hunger --
+            case 6:                
+            case 7:                
+            case 8:
+                break;
+            case 9:                
+            case 10:
+                break;
+        }
     }
 
     // populateAnimalsList () {
@@ -433,11 +448,11 @@ class cat extends Animal {
             case 2:
             case 3:
             case 4:
-                this.bored -= 10
+                this._bored -= 10
                 break;
             case 5:
             case 6:
-                this.hunger -= 5
+                this._hunger -= 5
             case 7:
             case 8:
                 this._thirst -= 10

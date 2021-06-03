@@ -1,0 +1,14 @@
+div {
+    height:150px;
+    width:200px;
+    background-color: pink;
+    text-align: center;
+    font-size: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+button {
+    height: 30px;
+    width: 30px;
+}
