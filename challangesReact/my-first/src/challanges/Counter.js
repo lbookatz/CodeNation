@@ -8,7 +8,7 @@ const Number = () => {
     return(  
     <div class="button">
         <button onClick={() => setNumber(number + 1)}>+</button>
-        <h1> {number} </h1>
+        {number}
         <button onClick={() => setNumber(number - 1)}>-</button>
     </div>
   ) ;
