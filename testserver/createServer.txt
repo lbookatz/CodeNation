@@ -1,0 +1,36 @@
+npm init -y
+mkdir lib
+touch lib/customModuleName.js
+mkdir public
+touch public/main.css
+mkdir routes
+touch routes/routername.js
+mkdir views
+touch views/404.hbs
+touch views/index.hbs
+mkdir views/layouts
+touch views/layouts/main.hbs
+echo '<!DOCTYPE html>' >> views/layouts/main.hbs
+echo '<html lang="en">' >> views/layouts/main.hbs
+echo '<head>' >> views/layouts/main.hbs
+echo '<meta charset="UTF-8">' >> views/layouts/main.hbs
+echo '    <link rel="stylesheet" href="main.css">' >> views/layouts/main.hbs
+echo '	<title>Document</title>' >> views/layouts/main.hbs
+echo '</head>' >> views/layouts/main.hbs
+echo '<body>' >> views/layouts/main.hbs
+echo '	{{{body}}}' >> views/layouts/main.hbs
+echo '</body>' >> views/layouts/main.hbs
+echo '</html>' >> views/layouts/main.hbs
+mkdir views/partial
+touch index.js
+touch .env
+touch .gitignore
+echo ".env" >> .gitignore
+echo "/node_modules" >> .gitignore
+npm install express
+npm install express-handlebars --save
+npm install nodemon --save-dev
+sed -i 's/"scripts": {/"scripts": {\n"start": "node index.js",/' package.json
+git add .
+git commit -m "initial Commit"
+git tag start
