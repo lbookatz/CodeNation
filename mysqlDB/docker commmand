@@ -1,0 +1,1 @@
+docker run --rm -dp 3306:3306 -v sqlData:/var/lib/mysql -v sqlConfig:/etc mysql
