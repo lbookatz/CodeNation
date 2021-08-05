@@ -22,6 +22,7 @@ echo '	{{{body}}}' >> views/layouts/main.hbs
 echo '</body>' >> views/layouts/main.hbs
 echo '</html>' >> views/layouts/main.hbs
 mkdir views/partial
+touch views/partial/navbar.hbs
 touch index.js
 touch .env
 touch .gitignore
